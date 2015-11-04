@@ -244,7 +244,7 @@ endif
 
 # Linux
 ifeq ($(LINUX), 1)
-	CXX ?= /usr/bin/g++
+	CXX ?= /usr/bin/g++-5
 	GCCVERSION := $(shell $(CXX) -dumpversion | cut -f1,2 -d.)
 	# older versions of gcc are too dumb to build boost with -Wuninitalized
 	ifeq ($(shell echo | awk '{exit $(GCCVERSION) < 4.6;}'), 1)
